@@ -1,6 +1,5 @@
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, ChakraProvider, theme } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import "./Popup.scss";
 
 export default function Popup() {
   useEffect(() => {
@@ -9,9 +8,11 @@ export default function Popup() {
   }, []);
 
   return (
-    <Box>
-      <Text>Hi</Text>
-      <Button>Moin</Button>
-    </Box>
+    <ChakraProvider theme={theme}>
+      <Box>
+        <Text>Hi</Text>
+        <Button>Moin</Button>
+      </Box>
+    </ChakraProvider>
   );
 }
