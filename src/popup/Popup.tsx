@@ -1,3 +1,4 @@
+import { Box, Text, Button } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import "./Popup.scss";
 
@@ -7,5 +8,10 @@ export default function Popup() {
     chrome.runtime.sendMessage({ popupMounted: true });
   }, []);
 
-  return <div className="popupContainer">Hello, world!</div>;
+  return (
+    <Box>
+      <Text>Hi</Text>
+      <Button>Moin</Button>
+    </Box>
+  );
 }
