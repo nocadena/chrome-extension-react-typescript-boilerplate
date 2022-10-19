@@ -1,7 +1,7 @@
 import { SafeEventEmitterProvider } from "@web3auth-mpc/base";
 import { Web3Auth } from "@web3auth-mpc/web3auth";
 import RPC from "./ethers";
-
+//https://web3auth.io/docs/sdk/web/web3auth-mpc
 export const login = async (web3auth: Web3Auth) => {
   if (!web3auth) {
     console.log("web3auth not initialized yet");

@@ -32,7 +32,6 @@ export type { Vm } from "./Vm";
 export * as factories from "./factories";
 export type { IController } from "./apwine/IController";
 export { IController__factory } from "./factories/apwine/IController__factory";
-export type { IERC20 } from "./apwine/IERC20";
 export { IERC20__factory } from "./factories/apwine/IERC20__factory";
 export type { IERC20Upgradeable } from "./apwine/IERC20Upgradeable";
 export { IERC20Upgradeable__factory } from "./factories/apwine/IERC20Upgradeable__factory";
