@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState, useEffect, useContext } from "react";
-import { price } from "../pages/api/coinbasemarketcap";
+// import { price } from "../pages/api/coinbasemarketcap";
 import { getTokenPrices } from "../util/coinbasemarketcap";
 import { tokens } from "../util/constants";
 import { loadUserInvestments, loadUserTokens } from "../util/tokens";
@@ -17,6 +17,7 @@ import {
   InvestedToken,
   investment,
   investmentDetails,
+  price,
   UserToken,
 } from "../util/types";
 import { Token } from "./Token";

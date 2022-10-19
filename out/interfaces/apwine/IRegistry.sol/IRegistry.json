@@ -1,0 +1,1202 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_future",
+          "type": "address"
+        }
+      ],
+      "name": "addFutureVault",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "futureVaultCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getControllerAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFYTLogicAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFutureVaultAt",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPTLogicAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTokensFactoryAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTreasuryAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_future",
+          "type": "address"
+        }
+      ],
+      "name": "isRegisteredFutureVault",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_future",
+          "type": "address"
+        }
+      ],
+      "name": "removeFutureVault",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newController",
+          "type": "address"
+        }
+      ],
+      "name": "setController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_FYTLogic",
+          "type": "address"
+        }
+      ],
+      "name": "setFYTLogic",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_PTLogic",
+          "type": "address"
+        }
+      ],
+      "name": "setPTLogic",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newTreasury",
+          "type": "address"
+        }
+      ],
+      "name": "setTreasury",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addFutureVault(address)": "bc97cb18",
+    "futureVaultCount()": "56da7c28",
+    "getControllerAddress()": "c57380a2",
+    "getFYTLogicAddress()": "092e12af",
+    "getFutureVaultAt(uint256)": "1c93e128",
+    "getPTLogicAddress()": "9cfc9af0",
+    "getTokensFactoryAddress()": "4bf61d10",
+    "getTreasuryAddress()": "e0024604",
+    "isRegisteredFutureVault(address)": "e3dcc0f8",
+    "removeFutureVault(address)": "b71c9b32",
+    "setController(address)": "92eefe9b",
+    "setFYTLogic(address)": "d598b163",
+    "setPTLogic(address)": "87a30eaf",
+    "setTreasury(address)": "f0f44260"
+  },
+  "ast": {
+    "absolutePath": "contracts\\apwine\\protocol\\contracts\\interfaces\\apwine\\IRegistry.sol",
+    "id": 1459,
+    "exportedSymbols": {
+      "IRegistry": [
+        1458
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:2995:23",
+    "nodes": [
+      {
+        "id": 1368,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:23",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 1369,
+        "nodeType": "PragmaDirective",
+        "src": "66:33:23",
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ]
+      },
+      {
+        "id": 1458,
+        "nodeType": "ContractDefinition",
+        "src": "103:2930:23",
+        "nodes": [
+          {
+            "id": 1375,
+            "nodeType": "FunctionDefinition",
+            "src": "275:52:23",
+            "documentation": {
+              "id": 1370,
+              "nodeType": "StructuredDocumentation",
+              "src": "149:120:23",
+              "text": " @notice Setter for the treasury address\n @param _newTreasury the address of the new treasury"
+            },
+            "functionSelector": "f0f44260",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasury",
+            "nameLocation": "284:11:23",
+            "parameters": {
+              "id": 1373,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1372,
+                  "mutability": "mutable",
+                  "name": "_newTreasury",
+                  "nameLocation": "304:12:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1375,
+                  "src": "296:20:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1371,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "296:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "295:22:23"
+            },
+            "returnParameters": {
+              "id": 1374,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "326:0:23"
+            },
+            "scope": 1458,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1381,
+            "nodeType": "FunctionDefinition",
+            "src": "467:56:23",
+            "documentation": {
+              "id": 1376,
+              "nodeType": "StructuredDocumentation",
+              "src": "335:126:23",
+              "text": " @notice Setter for the controller address\n @param _newController the address of the new controller"
+            },
+            "functionSelector": "92eefe9b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setController",
+            "nameLocation": "476:13:23",
+            "parameters": {
+              "id": 1379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1378,
+                  "mutability": "mutable",
+                  "name": "_newController",
+                  "nameLocation": "498:14:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1381,
+                  "src": "490:22:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1377,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:24:23"
+            },
+            "returnParameters": {
+              "id": 1380,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "522:0:23"
+            },
+            "scope": 1458,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1387,
+            "nodeType": "FunctionDefinition",
+            "src": "669:47:23",
+            "documentation": {
+              "id": 1382,
+              "nodeType": "StructuredDocumentation",
+              "src": "531:132:23",
+              "text": " @notice Setter for the APWine IBT logic address\n @param _PTLogic the address of the new APWine IBT logic"
+            },
+            "functionSelector": "87a30eaf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPTLogic",
+            "nameLocation": "678:10:23",
+            "parameters": {
+              "id": 1385,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1384,
+                  "mutability": "mutable",
+                  "name": "_PTLogic",
+                  "nameLocation": "697:8:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1387,
+                  "src": "689:16:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1383,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "689:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "688:18:23"
+            },
+            "returnParameters": {
+              "id": 1386,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "715:0:23"
+            },
+            "scope": 1458,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1393,
+            "nodeType": "FunctionDefinition",
+            "src": "863:49:23",
+            "documentation": {
+              "id": 1388,
+              "nodeType": "StructuredDocumentation",
+              "src": "724:133:23",
+              "text": " @notice Setter for the APWine FYT logic address\n @param _FYTLogic the address of the new APWine FYT logic"
+            },
+            "functionSelector": "d598b163",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFYTLogic",
+            "nameLocation": "872:11:23",
+            "parameters": {
+              "id": 1391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1390,
+                  "mutability": "mutable",
+                  "name": "_FYTLogic",
+                  "nameLocation": "892:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1393,
+                  "src": "884:17:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1389,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "884:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "883:19:23"
+            },
+            "returnParameters": {
+              "id": 1392,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "911:0:23"
+            },
+            "scope": 1458,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1399,
+            "nodeType": "FunctionDefinition",
+            "src": "1034:64:23",
+            "documentation": {
+              "id": 1394,
+              "nodeType": "StructuredDocumentation",
+              "src": "920:108:23",
+              "text": " @notice Getter for the controller address\n @return the address of the controller"
+            },
+            "functionSelector": "c57380a2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getControllerAddress",
+            "nameLocation": "1043:20:23",
+            "parameters": {
+              "id": 1395,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1063:2:23"
+            },
+            "returnParameters": {
+              "id": 1398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1397,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1399,
+                  "src": "1089:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1396,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1089:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1088:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1405,
+            "nodeType": "FunctionDefinition",
+            "src": "1216:62:23",
+            "documentation": {
+              "id": 1400,
+              "nodeType": "StructuredDocumentation",
+              "src": "1106:104:23",
+              "text": " @notice Getter for the treasury address\n @return the address of the treasury"
+            },
+            "functionSelector": "e0024604",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTreasuryAddress",
+            "nameLocation": "1225:18:23",
+            "parameters": {
+              "id": 1401,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1243:2:23"
+            },
+            "returnParameters": {
+              "id": 1404,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1403,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1405,
+                  "src": "1269:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1402,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1269:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1268:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1411,
+            "nodeType": "FunctionDefinition",
+            "src": "1399:67:23",
+            "documentation": {
+              "id": 1406,
+              "nodeType": "StructuredDocumentation",
+              "src": "1286:107:23",
+              "text": " @notice Getter for the token factory address\n @return the token factory address"
+            },
+            "functionSelector": "4bf61d10",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokensFactoryAddress",
+            "nameLocation": "1408:23:23",
+            "parameters": {
+              "id": 1407,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1431:2:23"
+            },
+            "returnParameters": {
+              "id": 1410,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1409,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1411,
+                  "src": "1457:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1408,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1457:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1456:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1417,
+            "nodeType": "FunctionDefinition",
+            "src": "1589:61:23",
+            "documentation": {
+              "id": 1412,
+              "nodeType": "StructuredDocumentation",
+              "src": "1474:109:23",
+              "text": " @notice Getter for APWine IBT logic address\n @return the APWine IBT logic address"
+            },
+            "functionSelector": "9cfc9af0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPTLogicAddress",
+            "nameLocation": "1598:17:23",
+            "parameters": {
+              "id": 1413,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1615:2:23"
+            },
+            "returnParameters": {
+              "id": 1416,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1415,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1417,
+                  "src": "1641:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1414,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1641:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1640:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1423,
+            "nodeType": "FunctionDefinition",
+            "src": "1773:62:23",
+            "documentation": {
+              "id": 1418,
+              "nodeType": "StructuredDocumentation",
+              "src": "1658:109:23",
+              "text": " @notice Getter for APWine FYT logic address\n @return the APWine FYT logic address"
+            },
+            "functionSelector": "092e12af",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFYTLogicAddress",
+            "nameLocation": "1782:18:23",
+            "parameters": {
+              "id": 1419,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1800:2:23"
+            },
+            "returnParameters": {
+              "id": 1422,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1421,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1423,
+                  "src": "1826:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1826:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1825:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1429,
+            "nodeType": "FunctionDefinition",
+            "src": "1997:50:23",
+            "documentation": {
+              "id": 1424,
+              "nodeType": "StructuredDocumentation",
+              "src": "1862:129:23",
+              "text": " @notice Add a future to the registry\n @param _future the address of the future to add to the registry"
+            },
+            "functionSelector": "bc97cb18",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFutureVault",
+            "nameLocation": "2006:14:23",
+            "parameters": {
+              "id": 1427,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1426,
+                  "mutability": "mutable",
+                  "name": "_future",
+                  "nameLocation": "2029:7:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1429,
+                  "src": "2021:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1425,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2021:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2020:17:23"
+            },
+            "returnParameters": {
+              "id": 1428,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2046:0:23"
+            },
+            "scope": 1458,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1435,
+            "nodeType": "FunctionDefinition",
+            "src": "2200:53:23",
+            "documentation": {
+              "id": 1430,
+              "nodeType": "StructuredDocumentation",
+              "src": "2055:139:23",
+              "text": " @notice Remove a future from the registry\n @param _future the address of the future to remove from the registry"
+            },
+            "functionSelector": "b71c9b32",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFutureVault",
+            "nameLocation": "2209:17:23",
+            "parameters": {
+              "id": 1433,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1432,
+                  "mutability": "mutable",
+                  "name": "_future",
+                  "nameLocation": "2235:7:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1435,
+                  "src": "2227:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2227:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2226:17:23"
+            },
+            "returnParameters": {
+              "id": 1434,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2252:0:23"
+            },
+            "scope": 1458,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1443,
+            "nodeType": "FunctionDefinition",
+            "src": "2462:106:23",
+            "documentation": {
+              "id": 1436,
+              "nodeType": "StructuredDocumentation",
+              "src": "2261:195:23",
+              "text": " @notice Getter to check if a future is registered\n @param _future the address of the future to check the registration of\n @return true if it is, false otherwise"
+            },
+            "functionSelector": "e3dcc0f8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isRegisteredFutureVault",
+            "nameLocation": "2471:23:23",
+            "parameters": {
+              "id": 1439,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1438,
+                  "mutability": "mutable",
+                  "name": "_future",
+                  "nameLocation": "2503:7:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1443,
+                  "src": "2495:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1437,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2495:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2494:17:23"
+            },
+            "returnParameters": {
+              "id": 1442,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1441,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1443,
+                  "src": "2562:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1440,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2562:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2561:6:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1451,
+            "nodeType": "FunctionDefinition",
+            "src": "2767:74:23",
+            "documentation": {
+              "id": 1444,
+              "nodeType": "StructuredDocumentation",
+              "src": "2576:185:23",
+              "text": " @notice Getter for the future registered at an index\n @param _index the index of the future to return\n @return the address of the corresponding future"
+            },
+            "functionSelector": "1c93e128",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFutureVaultAt",
+            "nameLocation": "2776:16:23",
+            "parameters": {
+              "id": 1447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1446,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nameLocation": "2801:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1451,
+                  "src": "2793:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1445,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2793:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2792:16:23"
+            },
+            "returnParameters": {
+              "id": 1450,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1449,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1451,
+                  "src": "2832:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1448,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2832:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2831:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1457,
+            "nodeType": "FunctionDefinition",
+            "src": "2970:60:23",
+            "documentation": {
+              "id": 1452,
+              "nodeType": "StructuredDocumentation",
+              "src": "2849:115:23",
+              "text": " @notice Getter for number of future registered\n @return the number of future registered"
+            },
+            "functionSelector": "56da7c28",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "futureVaultCount",
+            "nameLocation": "2979:16:23",
+            "parameters": {
+              "id": 1453,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2995:2:23"
+            },
+            "returnParameters": {
+              "id": 1456,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1455,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1457,
+                  "src": "3021:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1454,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3021:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3020:9:23"
+            },
+            "scope": 1458,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1458
+        ],
+        "name": "IRegistry",
+        "nameLocation": "113:9:23",
+        "scope": 1459,
+        "usedErrors": []
+      }
+    ],
+    "license": "BUSL-1.1"
+  },
+  "id": 23
+}

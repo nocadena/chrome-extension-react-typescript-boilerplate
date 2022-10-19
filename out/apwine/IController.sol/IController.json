@@ -1,0 +1,2816 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "DepositsPaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "DepositsResumed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "FutureRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "FutureSetToBeTerminated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "FutureTerminated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "FutureUnregistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_feeFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewPerformanceFeeFactor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_periodIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewPeriodDurationIndexSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_periodDuration",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_nextSwitchTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "NextPeriodSwitchSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IRegistry",
+          "name": "_registry",
+          "type": "address"
+        }
+      ],
+      "name": "RegistryChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_startingDelay",
+          "type": "uint256"
+        }
+      ],
+      "name": "StartingDelaySet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "WithdrawalsPaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IFutureVault",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "WithdrawalsResumed",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "STARTING_DELAY",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "createFYTDelegationTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "exitTerminatedFuture",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "getCurrentPerformanceFeeFactor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDurations",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "durationsList",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_periodDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFuturesWithDuration",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "filteredFutures",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "getNextPerformanceFeeFactor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_periodDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "getNextPeriodStart",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_periodDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPeriodIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRegistryAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "isDepositsPaused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "isFutureSetToBeTerminated",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "isFutureTerminated",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        }
+      ],
+      "name": "isWithdrawalsPaused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_futureVault",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawFYTDelegationFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "STARTING_DELAY()": "338b8c49",
+    "createFYTDelegationTo(address,address,uint256)": "4d613ade",
+    "deposit(address,uint256)": "47e7ef24",
+    "exitTerminatedFuture(address,address)": "df227dc8",
+    "getCurrentPerformanceFeeFactor(address)": "eabd8f7d",
+    "getDurations()": "c4d5b37d",
+    "getFuturesWithDuration(uint256)": "ee21c3ce",
+    "getNextPerformanceFeeFactor(address)": "291edd66",
+    "getNextPeriodStart(uint256)": "041c2120",
+    "getPeriodIndex(uint256)": "bd669cc9",
+    "getRegistryAddress()": "f21de1e8",
+    "isDepositsPaused(address)": "9c8975bc",
+    "isFutureSetToBeTerminated(address)": "e812a4ec",
+    "isFutureTerminated(address)": "41383193",
+    "isWithdrawalsPaused(address)": "5aacaf0e",
+    "withdraw(address,uint256)": "f3fef3a3",
+    "withdrawFYTDelegationFrom(address,address,uint256)": "1b04bdad"
+  },
+  "ast": {
+    "absolutePath": "contracts/apwine/protocol/contracts/interfaces/apwine/IController.sol",
+    "id": 15508,
+    "exportedSymbols": {
+      "IController": [
+        15507
+      ],
+      "IERC20": [
+        16209
+      ],
+      "IERC20Upgradeable": [
+        16033
+      ],
+      "IFutureVault": [
+        15863
+      ],
+      "IFutureWallet": [
+        16106
+      ],
+      "IPT": [
+        16165
+      ],
+      "IRegistry": [
+        15955
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:6486:4",
+    "nodes": [
+      {
+        "id": 15303,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:4",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 15304,
+        "nodeType": "ImportDirective",
+        "src": "66:28:4",
+        "absolutePath": "contracts/apwine/protocol/contracts/interfaces/apwine/IFutureVault.sol",
+        "file": "./IFutureVault.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 15508,
+        "sourceUnit": 15864,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 15305,
+        "nodeType": "ImportDirective",
+        "src": "96:25:4",
+        "absolutePath": "contracts/apwine/protocol/contracts/interfaces/apwine/IRegistry.sol",
+        "file": "./IRegistry.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 15508,
+        "sourceUnit": 15956,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 15507,
+        "nodeType": "ContractDefinition",
+        "src": "125:6399:4",
+        "nodes": [
+          {
+            "id": 15311,
+            "nodeType": "EventDefinition",
+            "src": "174:106:4",
+            "anonymous": false,
+            "eventSelector": "7015405d264c65fb8d0c96f0d79b8f4c294c8dacbd821294e89649159494a9d9",
+            "name": "NextPeriodSwitchSet",
+            "nameLocation": "180:19:4",
+            "parameters": {
+              "id": 15310,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15307,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_periodDuration",
+                  "nameLocation": "218:15:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15311,
+                  "src": "210:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15306,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "210:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15309,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_nextSwitchTimestamp",
+                  "nameLocation": "252:20:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15311,
+                  "src": "244:28:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15308,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "199:80:4"
+            }
+          },
+          {
+            "id": 15315,
+            "nodeType": "EventDefinition",
+            "src": "286:54:4",
+            "anonymous": false,
+            "eventSelector": "ccd5e150ff3edf89bdc920f29b2dff17c43969f7a11cb5bcf050cb8dc4508252",
+            "name": "NewPeriodDurationIndexSet",
+            "nameLocation": "292:25:4",
+            "parameters": {
+              "id": 15314,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15313,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_periodIndex",
+                  "nameLocation": "326:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15315,
+                  "src": "318:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15312,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "318:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "317:22:4"
+            }
+          },
+          {
+            "id": 15320,
+            "nodeType": "EventDefinition",
+            "src": "346:50:4",
+            "anonymous": false,
+            "eventSelector": "4689c43367e2f2d63a4825749e54aeb0db216c23200a1998e4de8d4c4c07c6fa",
+            "name": "FutureRegistered",
+            "nameLocation": "352:16:4",
+            "parameters": {
+              "id": 15319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15318,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "382:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15320,
+                  "src": "369:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15317,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15316,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "369:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "369:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "368:27:4"
+            }
+          },
+          {
+            "id": 15325,
+            "nodeType": "EventDefinition",
+            "src": "402:52:4",
+            "anonymous": false,
+            "eventSelector": "d35b4ee91e78e24074c0bd7f0c93ead6223a97cbd73854b2d49910f413afc375",
+            "name": "FutureUnregistered",
+            "nameLocation": "408:18:4",
+            "parameters": {
+              "id": 15324,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15323,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "440:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15325,
+                  "src": "427:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15322,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15321,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "427:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "427:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "426:27:4"
+            }
+          },
+          {
+            "id": 15329,
+            "nodeType": "EventDefinition",
+            "src": "460:47:4",
+            "anonymous": false,
+            "eventSelector": "0231d2bba9f0be98a6646ca3dc8184c854ce3e3691f77409d783eb88321a4b6c",
+            "name": "StartingDelaySet",
+            "nameLocation": "466:16:4",
+            "parameters": {
+              "id": 15328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15327,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_startingDelay",
+                  "nameLocation": "491:14:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15329,
+                  "src": "483:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15326,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "482:24:4"
+            }
+          },
+          {
+            "id": 15336,
+            "nodeType": "EventDefinition",
+            "src": "513:102:4",
+            "anonymous": false,
+            "eventSelector": "00199739b721228914bf727f52d84f3225857975372d6df15b204131cdb6f2d1",
+            "name": "NewPerformanceFeeFactor",
+            "nameLocation": "519:23:4",
+            "parameters": {
+              "id": 15335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15332,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "566:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15336,
+                  "src": "553:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15331,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15330,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "553:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "553:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15334,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_feeFactor",
+                  "nameLocation": "597:10:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15336,
+                  "src": "589:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15333,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "542:72:4"
+            }
+          },
+          {
+            "id": 15341,
+            "nodeType": "EventDefinition",
+            "src": "621:50:4",
+            "anonymous": false,
+            "eventSelector": "6fb9db917303291312a6cfd4550d853e3610593dc4d477069ce355cb8a8fa89b",
+            "name": "FutureTerminated",
+            "nameLocation": "627:16:4",
+            "parameters": {
+              "id": 15340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15339,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "657:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15341,
+                  "src": "644:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15338,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15337,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "644:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "644:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "643:27:4"
+            }
+          },
+          {
+            "id": 15346,
+            "nodeType": "EventDefinition",
+            "src": "677:48:4",
+            "anonymous": false,
+            "eventSelector": "eb225a736fbfee3f85ccb72bdf84ff0396ab358b7970e2cc351ab3e3fd92358d",
+            "name": "DepositsPaused",
+            "nameLocation": "683:14:4",
+            "parameters": {
+              "id": 15345,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15344,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "711:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15346,
+                  "src": "698:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15343,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15342,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "698:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "698:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "697:27:4"
+            }
+          },
+          {
+            "id": 15351,
+            "nodeType": "EventDefinition",
+            "src": "731:49:4",
+            "anonymous": false,
+            "eventSelector": "22ab73af03f04a21e91c7923327f99279b7f5d07d9551762c39bccdf051f1fe9",
+            "name": "DepositsResumed",
+            "nameLocation": "737:15:4",
+            "parameters": {
+              "id": 15350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15349,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "766:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15351,
+                  "src": "753:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15348,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15347,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "753:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "753:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "752:27:4"
+            }
+          },
+          {
+            "id": 15356,
+            "nodeType": "EventDefinition",
+            "src": "786:51:4",
+            "anonymous": false,
+            "eventSelector": "7c82b8b6bc44325506945ff406eeb0f2add5b91cfdd2265e80994967d30a787d",
+            "name": "WithdrawalsPaused",
+            "nameLocation": "792:17:4",
+            "parameters": {
+              "id": 15355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15354,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "823:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15356,
+                  "src": "810:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15353,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15352,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "810:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "810:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "809:27:4"
+            }
+          },
+          {
+            "id": 15361,
+            "nodeType": "EventDefinition",
+            "src": "843:52:4",
+            "anonymous": false,
+            "eventSelector": "ee8604aac6309cd60dd8976b3395f655804f4be49f8db54143824abf1c30bfdf",
+            "name": "WithdrawalsResumed",
+            "nameLocation": "849:18:4",
+            "parameters": {
+              "id": 15360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15359,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "881:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15361,
+                  "src": "868:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15358,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15357,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "868:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "868:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "867:27:4"
+            }
+          },
+          {
+            "id": 15366,
+            "nodeType": "EventDefinition",
+            "src": "901:43:4",
+            "anonymous": false,
+            "eventSelector": "db0239c63d4033dcdd21bd44f8dd479a03efbae12f6bbe27c0a5f923d26514cc",
+            "name": "RegistryChanged",
+            "nameLocation": "907:15:4",
+            "parameters": {
+              "id": 15365,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15364,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_registry",
+                  "nameLocation": "933:9:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15366,
+                  "src": "923:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IRegistry_$15955",
+                    "typeString": "contract IRegistry"
+                  },
+                  "typeName": {
+                    "id": 15363,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15362,
+                      "name": "IRegistry",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15955,
+                      "src": "923:9:4"
+                    },
+                    "referencedDeclaration": 15955,
+                    "src": "923:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IRegistry_$15955",
+                      "typeString": "contract IRegistry"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:21:4"
+            }
+          },
+          {
+            "id": 15371,
+            "nodeType": "EventDefinition",
+            "src": "950:57:4",
+            "anonymous": false,
+            "eventSelector": "c3d76acd91fbc7fa857e2ecda0710c39b9f6a9ab7b7219f4d6bff71faca5b0d5",
+            "name": "FutureSetToBeTerminated",
+            "nameLocation": "956:23:4",
+            "parameters": {
+              "id": 15370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15369,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "993:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15371,
+                  "src": "980:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                    "typeString": "contract IFutureVault"
+                  },
+                  "typeName": {
+                    "id": 15368,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 15367,
+                      "name": "IFutureVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15863,
+                      "src": "980:12:4"
+                    },
+                    "referencedDeclaration": 15863,
+                    "src": "980:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFutureVault_$15863",
+                      "typeString": "contract IFutureVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "979:27:4"
+            }
+          },
+          {
+            "id": 15376,
+            "nodeType": "FunctionDefinition",
+            "src": "1035:58:4",
+            "functionSelector": "338b8c49",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "STARTING_DELAY",
+            "nameLocation": "1044:14:4",
+            "parameters": {
+              "id": 15372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1058:2:4"
+            },
+            "returnParameters": {
+              "id": 15375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15376,
+                  "src": "1084:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15373,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1084:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1083:9:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15384,
+            "nodeType": "FunctionDefinition",
+            "src": "1481:65:4",
+            "documentation": {
+              "id": 15377,
+              "nodeType": "StructuredDocumentation",
+              "src": "1127:348:4",
+              "text": " @notice Deposit funds into ongoing period\n @param _futureVault the address of the futureVault to be deposit the funds in\n @param _amount the amount to deposit on the ongoing period\n @dev part of the amount depostied will be used to buy back the yield already generated proportionaly to the amount deposited"
+            },
+            "functionSelector": "47e7ef24",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "1490:7:4",
+            "parameters": {
+              "id": 15382,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15379,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "1506:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15384,
+                  "src": "1498:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15378,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1498:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15381,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1528:7:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15384,
+                  "src": "1520:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15380,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1520:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1497:39:4"
+            },
+            "returnParameters": {
+              "id": 15383,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1545:0:4"
+            },
+            "scope": 15507,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15392,
+            "nodeType": "FunctionDefinition",
+            "src": "1755:66:4",
+            "documentation": {
+              "id": 15385,
+              "nodeType": "StructuredDocumentation",
+              "src": "1554:195:4",
+              "text": " @notice Withdraw deposited funds from APWine\n @param _futureVault the address of the futureVault to withdraw the IBT from\n @param _amount the amount to withdraw"
+            },
+            "functionSelector": "f3fef3a3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "1764:8:4",
+            "parameters": {
+              "id": 15390,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15387,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "1781:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15392,
+                  "src": "1773:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15386,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1773:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15389,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1803:7:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15392,
+                  "src": "1795:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15388,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1795:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1772:39:4"
+            },
+            "returnParameters": {
+              "id": 15391,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1820:0:4"
+            },
+            "scope": 15507,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15400,
+            "nodeType": "FunctionDefinition",
+            "src": "2079:76:4",
+            "documentation": {
+              "id": 15393,
+              "nodeType": "StructuredDocumentation",
+              "src": "1829:244:4",
+              "text": " @notice Exit a terminated pool\n @param _futureVault the address of the futureVault to exit from from\n @param _user the user to exit from the pool\n @dev only pt are required as there  aren't any new FYTs"
+            },
+            "functionSelector": "df227dc8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exitTerminatedFuture",
+            "nameLocation": "2088:20:4",
+            "parameters": {
+              "id": 15398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15395,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "2117:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15400,
+                  "src": "2109:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15394,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2109:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15397,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "2139:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15400,
+                  "src": "2131:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15396,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2131:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2108:37:4"
+            },
+            "returnParameters": {
+              "id": 15399,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2154:0:4"
+            },
+            "scope": 15507,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15410,
+            "nodeType": "FunctionDefinition",
+            "src": "2456:132:4",
+            "documentation": {
+              "id": 15401,
+              "nodeType": "StructuredDocumentation",
+              "src": "2163:287:4",
+              "text": " @notice Create a delegation from one address to another for a futureVault\n @param _futureVault the corresponding futureVault address\n @param _receiver the address receiving the futureVault FYTs\n @param _amount the of futureVault FYTs to delegate"
+            },
+            "functionSelector": "4d613ade",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createFYTDelegationTo",
+            "nameLocation": "2465:21:4",
+            "parameters": {
+              "id": 15408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15403,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "2505:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15410,
+                  "src": "2497:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15402,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2497:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15405,
+                  "mutability": "mutable",
+                  "name": "_receiver",
+                  "nameLocation": "2536:9:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15410,
+                  "src": "2528:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15404,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2528:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15407,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "2564:7:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15410,
+                  "src": "2556:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15406,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2556:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2486:92:4"
+            },
+            "returnParameters": {
+              "id": 15409,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2587:0:4"
+            },
+            "scope": 15507,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15420,
+            "nodeType": "FunctionDefinition",
+            "src": "2907:136:4",
+            "documentation": {
+              "id": 15411,
+              "nodeType": "StructuredDocumentation",
+              "src": "2596:305:4",
+              "text": " @notice Remove a delegation from one address to another for a futureVault\n @param _futureVault the corresponding futureVault address\n @param _receiver the address receiving the futureVault FYTs\n @param _amount the of futureVault FYTs to remove from the delegation"
+            },
+            "functionSelector": "1b04bdad",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawFYTDelegationFrom",
+            "nameLocation": "2916:25:4",
+            "parameters": {
+              "id": 15418,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15413,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "2960:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15420,
+                  "src": "2952:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15412,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2952:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15415,
+                  "mutability": "mutable",
+                  "name": "_receiver",
+                  "nameLocation": "2991:9:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15420,
+                  "src": "2983:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15414,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2983:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15417,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "3019:7:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15420,
+                  "src": "3011:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15416,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3011:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2941:92:4"
+            },
+            "returnParameters": {
+              "id": 15419,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3042:0:4"
+            },
+            "scope": 15507,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15426,
+            "nodeType": "FunctionDefinition",
+            "src": "3207:62:4",
+            "documentation": {
+              "id": 15421,
+              "nodeType": "StructuredDocumentation",
+              "src": "3072:129:4",
+              "text": " @notice Getter for the registry address of the protocol\n @return the address of the protocol registry"
+            },
+            "functionSelector": "f21de1e8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRegistryAddress",
+            "nameLocation": "3216:18:4",
+            "parameters": {
+              "id": 15422,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3234:2:4"
+            },
+            "returnParameters": {
+              "id": 15425,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15424,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15426,
+                  "src": "3260:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15423,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3260:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3259:9:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15434,
+            "nodeType": "FunctionDefinition",
+            "src": "3483:108:4",
+            "documentation": {
+              "id": 15427,
+              "nodeType": "StructuredDocumentation",
+              "src": "3277:200:4",
+              "text": " @notice Getter for the period index depending on the period duration of the futureVault\n @param _periodDuration the duration of the periods\n @return the period index"
+            },
+            "functionSelector": "bd669cc9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPeriodIndex",
+            "nameLocation": "3492:14:4",
+            "parameters": {
+              "id": 15430,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15429,
+                  "mutability": "mutable",
+                  "name": "_periodDuration",
+                  "nameLocation": "3515:15:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15434,
+                  "src": "3507:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15428,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3507:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3506:25:4"
+            },
+            "returnParameters": {
+              "id": 15433,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15432,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15434,
+                  "src": "3582:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15431,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3582:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3581:9:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15442,
+            "nodeType": "FunctionDefinition",
+            "src": "3859:112:4",
+            "documentation": {
+              "id": 15435,
+              "nodeType": "StructuredDocumentation",
+              "src": "3599:254:4",
+              "text": " @notice Getter for the beginning timestamp of the next period for the futures with a defined period duration\n @param _periodDuration the duration of the periods\n @return the timestamp of the beginning of the next period"
+            },
+            "functionSelector": "041c2120",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextPeriodStart",
+            "nameLocation": "3868:18:4",
+            "parameters": {
+              "id": 15438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15437,
+                  "mutability": "mutable",
+                  "name": "_periodDuration",
+                  "nameLocation": "3895:15:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15442,
+                  "src": "3887:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15436,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3887:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3886:25:4"
+            },
+            "returnParameters": {
+              "id": 15441,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15440,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15442,
+                  "src": "3962:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15439,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3962:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3961:9:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15450,
+            "nodeType": "FunctionDefinition",
+            "src": "4201:118:4",
+            "documentation": {
+              "id": 15443,
+              "nodeType": "StructuredDocumentation",
+              "src": "3979:216:4",
+              "text": " @notice Getter for the next performance fee factor of one futureVault\n @param _futureVault the address of the futureVault\n @return the next performance fee factor of the futureVault"
+            },
+            "functionSelector": "291edd66",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNextPerformanceFeeFactor",
+            "nameLocation": "4210:27:4",
+            "parameters": {
+              "id": 15446,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15445,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "4246:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15450,
+                  "src": "4238:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15444,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4238:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4237:22:4"
+            },
+            "returnParameters": {
+              "id": 15449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15448,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15450,
+                  "src": "4310:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15447,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4310:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4309:9:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15458,
+            "nodeType": "FunctionDefinition",
+            "src": "4539:121:4",
+            "documentation": {
+              "id": 15451,
+              "nodeType": "StructuredDocumentation",
+              "src": "4327:206:4",
+              "text": " @notice Getter for the performance fee factor of one futureVault\n @param _futureVault the address of the futureVault\n @return the performance fee factor of the futureVault"
+            },
+            "functionSelector": "eabd8f7d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCurrentPerformanceFeeFactor",
+            "nameLocation": "4548:30:4",
+            "parameters": {
+              "id": 15454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15453,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "4587:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15458,
+                  "src": "4579:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15452,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4579:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4578:22:4"
+            },
+            "returnParameters": {
+              "id": 15457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15456,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15458,
+                  "src": "4651:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15455,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4651:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4650:9:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15465,
+            "nodeType": "FunctionDefinition",
+            "src": "4844:106:4",
+            "documentation": {
+              "id": 15459,
+              "nodeType": "StructuredDocumentation",
+              "src": "4668:170:4",
+              "text": " @notice Getter for the list of futureVault durations registered in the contract\n @return durationsList which consists of futureVault durations"
+            },
+            "functionSelector": "c4d5b37d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDurations",
+            "nameLocation": "4853:12:4",
+            "parameters": {
+              "id": 15460,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4865:2:4"
+            },
+            "returnParameters": {
+              "id": 15464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15463,
+                  "mutability": "mutable",
+                  "name": "durationsList",
+                  "nameLocation": "4935:13:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15465,
+                  "src": "4918:30:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 15461,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4918:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 15462,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4918:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4917:32:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15474,
+            "nodeType": "FunctionDefinition",
+            "src": "5110:141:4",
+            "documentation": {
+              "id": 15466,
+              "nodeType": "StructuredDocumentation",
+              "src": "4958:146:4",
+              "text": " @notice Getter for the futures by period duration\n @param _periodDuration the period duration of the futures to return"
+            },
+            "functionSelector": "ee21c3ce",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFuturesWithDuration",
+            "nameLocation": "5119:22:4",
+            "parameters": {
+              "id": 15469,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15468,
+                  "mutability": "mutable",
+                  "name": "_periodDuration",
+                  "nameLocation": "5150:15:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15474,
+                  "src": "5142:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15467,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5142:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5141:25:4"
+            },
+            "returnParameters": {
+              "id": 15473,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15472,
+                  "mutability": "mutable",
+                  "name": "filteredFutures",
+                  "nameLocation": "5234:15:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15474,
+                  "src": "5217:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 15470,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "5217:7:4",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 15471,
+                    "nodeType": "ArrayTypeName",
+                    "src": "5217:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5216:34:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15482,
+            "nodeType": "FunctionDefinition",
+            "src": "5446:106:4",
+            "documentation": {
+              "id": 15475,
+              "nodeType": "StructuredDocumentation",
+              "src": "5259:181:4",
+              "text": " @notice Getter for the futureVault period state\n @param _futureVault the address of the futureVault\n @return true if the futureVault is terminated"
+            },
+            "functionSelector": "41383193",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFutureTerminated",
+            "nameLocation": "5455:18:4",
+            "parameters": {
+              "id": 15478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15477,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "5482:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15482,
+                  "src": "5474:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15476,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5474:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5473:22:4"
+            },
+            "returnParameters": {
+              "id": 15481,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15480,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15482,
+                  "src": "5546:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15479,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5546:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5545:6:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15490,
+            "nodeType": "FunctionDefinition",
+            "src": "5775:113:4",
+            "documentation": {
+              "id": 15483,
+              "nodeType": "StructuredDocumentation",
+              "src": "5560:209:4",
+              "text": " @notice Getter for the futureVault period state\n @param _futureVault the address of the futureVault\n @return true if the futureVault is set to be terminated at its expiration"
+            },
+            "functionSelector": "e812a4ec",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFutureSetToBeTerminated",
+            "nameLocation": "5784:25:4",
+            "parameters": {
+              "id": 15486,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15485,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "5818:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15490,
+                  "src": "5810:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15484,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5810:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5809:22:4"
+            },
+            "returnParameters": {
+              "id": 15489,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15488,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15490,
+                  "src": "5882:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15487,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5882:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5881:6:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15498,
+            "nodeType": "FunctionDefinition",
+            "src": "6102:107:4",
+            "documentation": {
+              "id": 15491,
+              "nodeType": "StructuredDocumentation",
+              "src": "5896:200:4",
+              "text": " @notice Getter for the futureVault withdrawals state\n @param _futureVault the address of the futureVault\n @return true is new withdrawals are paused, false otherwise"
+            },
+            "functionSelector": "5aacaf0e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWithdrawalsPaused",
+            "nameLocation": "6111:19:4",
+            "parameters": {
+              "id": 15494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15493,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "6139:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15498,
+                  "src": "6131:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15492,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6131:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6130:22:4"
+            },
+            "returnParameters": {
+              "id": 15497,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15496,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15498,
+                  "src": "6203:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15495,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6203:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6202:6:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 15506,
+            "nodeType": "FunctionDefinition",
+            "src": "6417:104:4",
+            "documentation": {
+              "id": 15499,
+              "nodeType": "StructuredDocumentation",
+              "src": "6217:194:4",
+              "text": " @notice Getter for the futureVault deposits state\n @param _futureVault the address of the futureVault\n @return true is new deposits are paused, false otherwise"
+            },
+            "functionSelector": "9c8975bc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isDepositsPaused",
+            "nameLocation": "6426:16:4",
+            "parameters": {
+              "id": 15502,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15501,
+                  "mutability": "mutable",
+                  "name": "_futureVault",
+                  "nameLocation": "6451:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15506,
+                  "src": "6443:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15500,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6443:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6442:22:4"
+            },
+            "returnParameters": {
+              "id": 15505,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15504,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15506,
+                  "src": "6515:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15503,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6515:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6514:6:4"
+            },
+            "scope": 15507,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IController",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          15507
+        ],
+        "name": "IController",
+        "nameLocation": "135:11:4",
+        "scope": 15508,
+        "usedErrors": []
+      }
+    ],
+    "license": "BUSL-1.1"
+  },
+  "id": 4
+}

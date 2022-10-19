@@ -10,9 +10,9 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useState, useEffect, useContext } from "react";
-import { price } from "../pages/api/coinbasemarketcap";
+// import { price } from "../pages/api/coinbasemarketcap";
 import { CORE_ADDRESS, tokens } from "../util/constants";
-import { investment, UserToken } from "../util/types";
+import { investment, price, UserToken } from "../util/types";
 import { Web3AuthContext } from "./Web3AuthProvider";
 import RPC from "../util/ethers";
 import { ethers } from "ethers";

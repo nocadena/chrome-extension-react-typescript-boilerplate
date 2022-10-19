@@ -1,7 +1,6 @@
 import { Box, Image, Spinner, Text } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { price } from "../pages/api/coinbasemarketcap";
+// import { price } from "../pages/api/coinbasemarketcap";
 import { UserToken } from "../util/types";
 export const Token = ({
   token,
@@ -14,11 +13,11 @@ export const Token = ({
   APY?: number;
   fixed?: boolean;
 }) => {
-  const router = useRouter();
+  // const router = useRouter();
   return (
     <Box w="100%">
       <Box
-        onClick={() => router.push(token.name + "?balance=" + token.amount)}
+        // onClick={() => router.push(token.name + "?balance=" + token.amount)}
         flexDir={"row"}
         display="flex"
         marginX="5"

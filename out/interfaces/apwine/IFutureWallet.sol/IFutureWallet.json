@@ -1,0 +1,950 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "WithdrawalsPaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "WithdrawalsResumed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_periodIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "YieldRedeemed",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getFutureVaultAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getIBTAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_periodIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getRedeemableYield",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRewardsRecipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "harvestRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "redeemAllWalletRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_rewardToken",
+          "type": "address"
+        }
+      ],
+      "name": "redeemWalletRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_periodIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "redeemYield",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "registerExpiredFuture",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        }
+      ],
+      "name": "setRewardRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getFutureVaultAddress()": "3806a53b",
+    "getIBTAddress()": "f018ae69",
+    "getRedeemableYield(uint256,address)": "a88c1bda",
+    "getRewardsRecipient()": "b4ca90b5",
+    "harvestRewards()": "2be11ae2",
+    "redeemAllWalletRewards()": "5d023fa4",
+    "redeemWalletRewards(address)": "cb06038e",
+    "redeemYield(uint256)": "258d3c33",
+    "registerExpiredFuture(uint256)": "2262827f",
+    "setRewardRecipient(address)": "e521136f"
+  },
+  "ast": {
+    "absolutePath": "contracts\\apwine\\protocol\\contracts\\interfaces\\apwine\\IFutureWallet.sol",
+    "id": 1367,
+    "exportedSymbols": {
+      "IFutureWallet": [
+        1366
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:2399:22",
+    "nodes": [
+      {
+        "id": 1295,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:22",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 1366,
+        "nodeType": "ContractDefinition",
+        "src": "68:2369:22",
+        "nodes": [
+          {
+            "id": 1301,
+            "nodeType": "EventDefinition",
+            "src": "119:57:22",
+            "anonymous": false,
+            "eventSelector": "0f83285fe818de372774823fc96c859451f7f69bc83b5523fca9230a242ecc72",
+            "name": "YieldRedeemed",
+            "nameLocation": "125:13:22",
+            "parameters": {
+              "id": 1300,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1297,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "147:5:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1301,
+                  "src": "139:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1296,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "139:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1299,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_periodIndex",
+                  "nameLocation": "162:12:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1301,
+                  "src": "154:20:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1298,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:37:22"
+            }
+          },
+          {
+            "id": 1303,
+            "nodeType": "EventDefinition",
+            "src": "182:26:22",
+            "anonymous": false,
+            "eventSelector": "6022a9e759c95aad593773b7a47586ff34cddc74d34ea6361f64c5bac98cf294",
+            "name": "WithdrawalsPaused",
+            "nameLocation": "188:17:22",
+            "parameters": {
+              "id": 1302,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "205:2:22"
+            }
+          },
+          {
+            "id": 1305,
+            "nodeType": "EventDefinition",
+            "src": "214:27:22",
+            "anonymous": false,
+            "eventSelector": "80712804c788bfc3adb28da898840268b4aba62a09eb0fdcb2473f864b3af885",
+            "name": "WithdrawalsResumed",
+            "nameLocation": "220:18:22",
+            "parameters": {
+              "id": 1304,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "238:2:22"
+            }
+          },
+          {
+            "id": 1311,
+            "nodeType": "FunctionDefinition",
+            "src": "383:57:22",
+            "documentation": {
+              "id": 1306,
+              "nodeType": "StructuredDocumentation",
+              "src": "249:128:22",
+              "text": " @notice register the yield of an expired period\n @param _amount the amount of yield to be registered"
+            },
+            "functionSelector": "2262827f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerExpiredFuture",
+            "nameLocation": "392:21:22",
+            "parameters": {
+              "id": 1309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1308,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "422:7:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1311,
+                  "src": "414:15:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1307,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "413:17:22"
+            },
+            "returnParameters": {
+              "id": 1310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "439:0:22"
+            },
+            "scope": 1366,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1317,
+            "nodeType": "FunctionDefinition",
+            "src": "630:52:22",
+            "documentation": {
+              "id": 1312,
+              "nodeType": "StructuredDocumentation",
+              "src": "448:176:22",
+              "text": " @notice redeem the yield of the underlying yield of the FYT held by the sender\n @param _periodIndex the index of the period to redeem the yield from"
+            },
+            "functionSelector": "258d3c33",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeemYield",
+            "nameLocation": "639:11:22",
+            "parameters": {
+              "id": 1315,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1314,
+                  "mutability": "mutable",
+                  "name": "_periodIndex",
+                  "nameLocation": "659:12:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1317,
+                  "src": "651:20:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1313,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "651:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "650:22:22"
+            },
+            "returnParameters": {
+              "id": 1316,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "681:0:22"
+            },
+            "scope": 1366,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1327,
+            "nodeType": "FunctionDefinition",
+            "src": "989:124:22",
+            "documentation": {
+              "id": 1318,
+              "nodeType": "StructuredDocumentation",
+              "src": "690:293:22",
+              "text": " @notice return the yield that could be redeemed by an address for a particular period\n @param _periodIndex the index of the corresponding period\n @param _user the FYT holder\n @return the yield that could be redeemed by the token holder for this period"
+            },
+            "functionSelector": "a88c1bda",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRedeemableYield",
+            "nameLocation": "998:18:22",
+            "parameters": {
+              "id": 1323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1320,
+                  "mutability": "mutable",
+                  "name": "_periodIndex",
+                  "nameLocation": "1025:12:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1327,
+                  "src": "1017:20:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1319,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1017:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1322,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "1047:5:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1327,
+                  "src": "1039:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1321,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1039:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1016:37:22"
+            },
+            "returnParameters": {
+              "id": 1326,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1325,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1327,
+                  "src": "1104:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1324,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1104:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1103:9:22"
+            },
+            "scope": 1366,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1333,
+            "nodeType": "FunctionDefinition",
+            "src": "1270:65:22",
+            "documentation": {
+              "id": 1328,
+              "nodeType": "StructuredDocumentation",
+              "src": "1121:143:22",
+              "text": " @notice getter for the address of the future corresponding to this future wallet\n @return the address of the future"
+            },
+            "functionSelector": "3806a53b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFutureVaultAddress",
+            "nameLocation": "1279:21:22",
+            "parameters": {
+              "id": 1329,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1300:2:22"
+            },
+            "returnParameters": {
+              "id": 1332,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1331,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1333,
+                  "src": "1326:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1330,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1326:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1325:9:22"
+            },
+            "scope": 1366,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1339,
+            "nodeType": "FunctionDefinition",
+            "src": "1486:57:22",
+            "documentation": {
+              "id": 1334,
+              "nodeType": "StructuredDocumentation",
+              "src": "1343:137:22",
+              "text": " @notice getter for the address of the IBT corresponding to this future wallet\n @return the address of the IBT"
+            },
+            "functionSelector": "f018ae69",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIBTAddress",
+            "nameLocation": "1495:13:22",
+            "parameters": {
+              "id": 1335,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1508:2:22"
+            },
+            "returnParameters": {
+              "id": 1338,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1337,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1339,
+                  "src": "1534:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1336,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1534:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1533:9:22"
+            },
+            "scope": 1366,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1343,
+            "nodeType": "FunctionDefinition",
+            "src": "1658:35:22",
+            "documentation": {
+              "id": 1340,
+              "nodeType": "StructuredDocumentation",
+              "src": "1581:71:22",
+              "text": " @notice Harvest all rewards from the future wallet"
+            },
+            "functionSelector": "2be11ae2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "harvestRewards",
+            "nameLocation": "1667:14:22",
+            "parameters": {
+              "id": 1341,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1681:2:22"
+            },
+            "returnParameters": {
+              "id": 1342,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1692:0:22"
+            },
+            "scope": 1366,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1347,
+            "nodeType": "FunctionDefinition",
+            "src": "1796:43:22",
+            "documentation": {
+              "id": 1344,
+              "nodeType": "StructuredDocumentation",
+              "src": "1701:89:22",
+              "text": " @notice Transfer all the redeemable rewards to set defined recipient"
+            },
+            "functionSelector": "5d023fa4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeemAllWalletRewards",
+            "nameLocation": "1805:22:22",
+            "parameters": {
+              "id": 1345,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1827:2:22"
+            },
+            "returnParameters": {
+              "id": 1346,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1838:0:22"
+            },
+            "scope": 1366,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1353,
+            "nodeType": "FunctionDefinition",
+            "src": "2021:60:22",
+            "documentation": {
+              "id": 1348,
+              "nodeType": "StructuredDocumentation",
+              "src": "1847:168:22",
+              "text": " @notice Transfer the specified token reward balance tot the defined recipient\n @param _rewardToken the reward token to redeem the balance of"
+            },
+            "functionSelector": "cb06038e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeemWalletRewards",
+            "nameLocation": "2030:19:22",
+            "parameters": {
+              "id": 1351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1350,
+                  "mutability": "mutable",
+                  "name": "_rewardToken",
+                  "nameLocation": "2058:12:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1353,
+                  "src": "2050:20:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1349,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2050:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2049:22:22"
+            },
+            "returnParameters": {
+              "id": 1352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2080:0:22"
+            },
+            "scope": 1366,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1359,
+            "nodeType": "FunctionDefinition",
+            "src": "2224:63:22",
+            "documentation": {
+              "id": 1354,
+              "nodeType": "StructuredDocumentation",
+              "src": "2089:129:22",
+              "text": " @notice Getter for the address of the rewards recipient\n @return the address of the rewards recipient"
+            },
+            "functionSelector": "b4ca90b5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRewardsRecipient",
+            "nameLocation": "2233:19:22",
+            "parameters": {
+              "id": 1355,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2252:2:22"
+            },
+            "returnParameters": {
+              "id": 1358,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1357,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1359,
+                  "src": "2278:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1356,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2278:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2277:9:22"
+            },
+            "scope": 1366,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 1365,
+            "nodeType": "FunctionDefinition",
+            "src": "2377:57:22",
+            "documentation": {
+              "id": 1360,
+              "nodeType": "StructuredDocumentation",
+              "src": "2295:76:22",
+              "text": " @notice Setter for the address of the rewards recipient"
+            },
+            "functionSelector": "e521136f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRewardRecipient",
+            "nameLocation": "2386:18:22",
+            "parameters": {
+              "id": 1363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1362,
+                  "mutability": "mutable",
+                  "name": "_recipient",
+                  "nameLocation": "2413:10:22",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1365,
+                  "src": "2405:18:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1361,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2405:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2404:20:22"
+            },
+            "returnParameters": {
+              "id": 1364,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2433:0:22"
+            },
+            "scope": 1366,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFutureWallet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1366
+        ],
+        "name": "IFutureWallet",
+        "nameLocation": "78:13:22",
+        "scope": 1367,
+        "usedErrors": []
+      }
+    ],
+    "license": "BUSL-1.1"
+  },
+  "id": 22
+}

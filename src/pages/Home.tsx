@@ -25,12 +25,10 @@ import coreABI from "../../out/contracts/Core.sol/Core.json";
 import { Core } from "../../types/ethers-contracts";
 import RPC from "../util/ethers";
 import { formatEther } from "ethers/lib/utils";
-import * as ripio from "@ripio/sdk";
 import { getTokenPrices } from "../util/coinbasemarketcap";
-import { cursorTo } from "readline";
-import { toast } from "react-toastify";
+import React from "react";
 //https://react-icons.github.io/react-icons/icons?name=md
-const Home: NextPage = () => {
+const Home = () => {
   console.log("reload");
   const authContext = useContext(Web3AuthContext);
   const [activeInvestments, setActiveInvestments] = useState(
