@@ -98,7 +98,8 @@ const Home = () => {
             ))}
           </>
         ) : (
-          <Spinner />
+          // <Spinner />
+          <Text>Mooooooinnn</Text>
         )}
       </Box>
     );
@@ -156,7 +157,7 @@ const Home = () => {
       });
     }
   }, [authContext, authContext?.provider, loggingIn]);
-  if (!authContext) return <Spinner />;
+  if (!authContext) return <Text>Mooon</Text>;
   else if (!authContext.provider)
     return (
       <Box
