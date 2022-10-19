@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "watch": "webpack -w --config webpack.dev.js"
+    "watch": "webpack -w --config webpack.dev.js",
+    "contracts": "forge install && forge build && typechain --target=ethers-v5 'out/**/*.json'"
   },
   "author": "Joe Martella",
   "license": "MIT",
@@ -28,6 +29,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "add": "^2.0.6",
+    "ethers": "^5.7.1",
     "framer-motion": "^7.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
