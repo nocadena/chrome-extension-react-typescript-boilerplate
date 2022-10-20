@@ -9,7 +9,6 @@ function getProvider() {
 function setGlobalProvider(providerInstance) {
   window.ethereum = providerInstance;
   window.dispatchEvent(new Event("ethereum#initialized"));
-  console.log(Injected);
 }
 
 setGlobalProvider(getProvider());

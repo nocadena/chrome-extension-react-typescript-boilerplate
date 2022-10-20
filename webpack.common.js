@@ -13,6 +13,8 @@ module.exports = {
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
     eventPage: path.join(__dirname, "src/eventPage.ts"),
+    contentScript: path.join(__dirname, "src/scripts/contentScript.js"),
+    inpage: path.join(__dirname, "src/scripts/inpage.js"),
   },
   output: {
     path: path.join(__dirname, "dist/js"),
@@ -53,7 +55,7 @@ module.exports = {
       os: require.resolve("os-browserify"),
       url: require.resolve("url"),
       process: require.resolve("process"),
-      fs: require.resolve("brfs"),
+      fs: require.resolve("browserify-fs"),
       path: require.resolve("path-browserify"),
     },
   },
