@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Web3Auth } from "@web3auth-mpc/web3auth";
 import { SafeEventEmitterProvider } from "@web3auth-mpc/base";
 import { OpenloginAdapter } from "@web3auth-mpc/openlogin-adapter";
+import { Text } from "@chakra-ui/react";
 const clientId =
   "BBLzio-vcma_d-Ra8hYxCWOxM0Q9OPiV02ZJh7KM1EX9ulsn3Z6wgDLsdyFtza2hE5GUD_WuS512hCFNoGxsMIY";
 export type Web3AuthContextData = {
