@@ -1,6 +1,6 @@
 import { Box, Text, Button, ChakraProvider, theme } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import "./Popup.scss";
+//import "./Popup.scss";
 import { injectScript } from "../utils/src";
 import Home from "../pages/Home";
 

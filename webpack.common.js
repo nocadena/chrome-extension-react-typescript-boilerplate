@@ -53,6 +53,8 @@ module.exports = {
       os: require.resolve("os-browserify"),
       url: require.resolve("url"),
       process: require.resolve("process"),
+      fs: require.resolve("browserify-fs"),
+      path: require.resolve("path-browserify"),
     },
   },
   plugins: plugins(),

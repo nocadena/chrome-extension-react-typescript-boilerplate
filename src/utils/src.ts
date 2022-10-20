@@ -1,7 +1,9 @@
 // These require calls need to use require to be statically recognized by browserify
 
-var fs = require("fs");
-import * as path from "path";
+//var fs = require("fs");
+var path = require("path");
+//import fs from "fs";
+var fs = require("browserify-fs");
 
 import { browser } from "webextension-polyfill";
 
@@ -11,6 +13,10 @@ import { browser } from "webextension-polyfill";
  * @param {string} content - Code to be executed in the current document
  */
 export function injectScript() {
+  const inpageContent = fs.readFileSync(
+    path.join(__dirname, "..", "..", "dist", "chrome", "inpage.js"),
+    "utf8"
+  );
   try {
     const inpageContent = fs.readFileSync(
       path.join(__dirname, "..", "..", "dist", "chrome", "inpage.js"),
