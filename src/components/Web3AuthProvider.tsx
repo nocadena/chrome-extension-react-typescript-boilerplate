@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Web3Auth } from "@web3auth-mpc/web3auth";
-import { SafeEventEmitterProvider } from "@web3auth-mpc/base";
-import { OpenloginAdapter } from "@web3auth-mpc/openlogin-adapter";
+import { Web3Auth } from "@web3auth/web3auth";
+import { SafeEventEmitterProvider } from "@web3auth/base";
 const clientId =
   "BBLzio-vcma_d-Ra8hYxCWOxM0Q9OPiV02ZJh7KM1EX9ulsn3Z6wgDLsdyFtza2hE5GUD_WuS512hCFNoGxsMIY";
 export type Web3AuthContextData = {
@@ -26,7 +25,6 @@ export const Web3AuthProvider = ({
   );
   useEffect(() => {
     const init = async () => {
-      const imports = await import("torus-mpc");
       try {
         console.log("test");
         const web3auth = new Web3Auth({
@@ -50,46 +48,9 @@ export const Web3AuthProvider = ({
         });
         (window as any).web3auth = web3auth;
         console.log("test2");
-        const openloginAdapter = new OpenloginAdapter({
-          loginSettings: {
-            mfaLevel: "mandatory",
-          },
-          tssSettings: {
-            useTSS: true,
-            tssGetPublic: imports.tssGetPublic,
-            tssSign: imports.tssSign,
-            tssDataCallback: imports.tssDataCallback,
-          },
-          adapterSettings: {
-            _iframeUrl: "https://mpc-beta.openlogin.com",
-            network: "development",
-            clientId,
-          },
-        });
-
-        console.log("test3");
-        (window as any).openloginAdapter = openloginAdapter;
-        console.log("test4");
-        web3auth.configureAdapter(openloginAdapter);
-        await web3auth.initModal({
-          modalConfig: {
-            "torus-evm": {
-              label: "Torus Wallet",
-              showOnModal: false,
-            },
-            metamask: {
-              label: "Metamask",
-              showOnModal: false,
-            },
-            "wallet-connect-v1": {
-              label: "Wallet Connect",
-              showOnModal: false,
-            },
-          },
-        });
+        await web3auth.initModal();
         console.log("test5");
         setWeb3auth(web3auth);
-
         if (web3auth.provider) {
           setProvider(web3auth.provider);
         }
