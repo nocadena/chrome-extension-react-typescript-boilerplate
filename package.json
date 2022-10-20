@@ -32,6 +32,7 @@
     "@web3auth-mpc/openlogin-adapter": "^2.1.22",
     "@web3auth-mpc/web3auth": "^2.1.22",
     "add": "^2.0.6",
+    "brfs": "^2.0.2",
     "browserify-fs": "^1.0.0",
     "crypto-browserify": "^3.12.0",
     "ethers": "^5.7.2",
