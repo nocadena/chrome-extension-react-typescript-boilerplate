@@ -23,10 +23,8 @@ export const Web3AuthProvider = ({
   const [provider, setProvider] = useState<SafeEventEmitterProvider | null>(
     null
   );
-  web3auth.provider;
   useEffect(() => {
     const init = async () => {
-      const imports = await import("torus-mpc");
       try {
         console.log("test");
         const web3auth = new Web3Auth({
@@ -50,25 +48,9 @@ export const Web3AuthProvider = ({
         });
         (window as any).web3auth = web3auth;
         console.log("test2");
-        await web3auth.initModal({
-          modalConfig: {
-            "torus-evm": {
-              label: "Torus Wallet",
-              showOnModal: false,
-            },
-            metamask: {
-              label: "Metamask",
-              showOnModal: false,
-            },
-            "wallet-connect-v1": {
-              label: "Wallet Connect",
-              showOnModal: false,
-            },
-          },
-        });
+        await web3auth.initModal();
         console.log("test5");
         setWeb3auth(web3auth);
-
         if (web3auth.provider) {
           setProvider(web3auth.provider);
         }
