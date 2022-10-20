@@ -5,8 +5,8 @@ import browser from "webextension-polyfill";
 import PortStream from "extension-port-stream";
 import { obj as createThoughStream } from "through2";
 
-import { isManifestV3 } from "../helpers/mv3.utils";
-import shouldInjectProvider from "../helpers/provider-injection";
+// import { isManifestV3 } from "../helpers/mv3.utils";
+// import shouldInjectProvider from "../helpers/provider-injection";
 
 // These require calls need to use require to be statically recognized by browserify
 const fs = require("fs");
@@ -16,7 +16,8 @@ const inpageContent = fs.readFileSync(
   path.join(__dirname, "..", "..", "dist", "chrome", "inpage.js"),
   "utf8"
 );
-
+const inpageSuffix = `//# sourceURL=${browser.runtime.getURL("inpage.js")}\n`;
+const inpageBundle = inpageContent + inpageSuffix;
 /**
  * Injects a script tag into the current document
  *
@@ -34,3 +35,4 @@ function injectScript(content) {
     console.error("MetaMask: Provider injection failed.", error);
   }
 }
+injectScript(inpageBundle);

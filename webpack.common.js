@@ -13,8 +13,6 @@ module.exports = {
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
     eventPage: path.join(__dirname, "src/eventPage.ts"),
-    contentScript: path.join(__dirname, "src/scripts/contentScript.js"),
-    inpage: path.join(__dirname, "src/scripts/inpage.js"),
   },
   output: {
     path: path.join(__dirname, "dist/js"),
