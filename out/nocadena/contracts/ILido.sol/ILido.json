@@ -1,0 +1,166 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_referral",
+          "type": "address"
+        }
+      ],
+      "name": "submit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "StETH",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "submit(address)": "a1903eab"
+  },
+  "ast": {
+    "absolutePath": "contracts\\ILido.sol",
+    "id": 435,
+    "exportedSymbols": {
+      "ILido": [
+        434
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:132:15",
+    "nodes": [
+      {
+        "id": 426,
+        "nodeType": "PragmaDirective",
+        "src": "33:24:15",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 434,
+        "nodeType": "ContractDefinition",
+        "src": "61:102:15",
+        "nodes": [
+          {
+            "id": 433,
+            "nodeType": "FunctionDefinition",
+            "src": "84:76:15",
+            "functionSelector": "a1903eab",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submit",
+            "nameLocation": "93:6:15",
+            "parameters": {
+              "id": 429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 428,
+                  "mutability": "mutable",
+                  "name": "_referral",
+                  "nameLocation": "108:9:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 433,
+                  "src": "100:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 427,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "99:19:15"
+            },
+            "returnParameters": {
+              "id": 432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 431,
+                  "mutability": "mutable",
+                  "name": "StETH",
+                  "nameLocation": "153:5:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 433,
+                  "src": "145:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 430,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:15:15"
+            },
+            "scope": 434,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ILido",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          434
+        ],
+        "name": "ILido",
+        "nameLocation": "71:5:15",
+        "scope": 435,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 15
+}
