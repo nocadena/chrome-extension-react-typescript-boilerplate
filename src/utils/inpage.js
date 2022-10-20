@@ -1,4 +1,8 @@
 import { ethers } from "ethers";
+import { initializeProvider } from "../providers/initializeInpageProvide";
+
+const CONTENT_SCRIPT = "metamask-contentscript";
+const INPAGE = "metamask-inpage";
 
 function getProvider() {
   return new ethers.providers.JsonRpcProvider(
@@ -13,3 +17,14 @@ function setGlobalProvider(providerInstance) {
 }
 
 setGlobalProvider(getProvider());
+
+// const metamaskStream = new WindowPostMessageStream({
+//   name: INPAGE,
+//   target: CONTENT_SCRIPT,
+// });
+
+// initializeProvider({
+//   connectionStream: metamaskStream,
+//   logger: log,
+//   shouldShimWeb3: true,
+// });
