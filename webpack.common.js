@@ -29,6 +29,11 @@ module.exports = {
       },
       {
         exclude: /node_modules/,
+        test: /\.js$/,
+        use: "transform-loader?../../module-brfs",
+      },
+      {
+        exclude: /node_modules/,
         test: /\.scss$/,
         use: [
           {
@@ -55,7 +60,7 @@ module.exports = {
       os: require.resolve("os-browserify"),
       url: require.resolve("url"),
       process: require.resolve("process"),
-      fs: require.resolve("browserify-fs"),
+      fs: require.resolve("brfs"),
       path: require.resolve("path-browserify"),
     },
   },
